@@ -1,5 +1,11 @@
 import "./App.css";
-import { HashRouter, Routes, Route, Outlet } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Outlet,
+  BrowserRouter,
+} from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import "slick-carousel/slick/slick.css";
@@ -42,7 +48,7 @@ function App() {
   );
   console.log(loggedIn);
   return (
-    <HashRouter>
+    <BrowserRouter basename="/test-public-fe">
       <BookContextProvider>
         <CartContextProvider>
           <Routes>
@@ -108,7 +114,7 @@ function App() {
           </Routes>
         </CartContextProvider>
       </BookContextProvider>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 export default App;
