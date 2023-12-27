@@ -1,0 +1,40 @@
+@media screen and (max-width: 758px){
+    .login-form .signup{
+        display: flex;
+        justify-content:center;
+    }
+}
+
+.login-form{
+    margin-top: 140px;
+    margin-bottom: 40px;
+}
+
+.login-form .logo{
+    width: 200px;
+   
+}
+.login-form .card{
+   
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+.login-form .mb-3 input{
+    background-color: #F5F5F7;
+    border-radius: 10px;
+}
+.login-form .d-grid button{
+    border-radius: 10px;
+    background-color:#FEBD69;
+    color: white;
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    border: none;
+}
+
+.login-form .d-grid button:hover{
+    background-color: #f9ca8b;
+}
+
+

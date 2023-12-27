@@ -1,0 +1,143 @@
+.order-tracking-container{
+    padding-left: 0;
+}
+.order-details-container{
+    background-color: rgb(255, 255, 255);
+    padding-left: 0px;
+    padding-right: 0px;
+    border-radius: 7px;
+}
+.order-container{
+    background-color: rgb(255, 255, 255);
+    padding: 20px 0px;
+    border-radius: 7px;
+    padding-right: 15px;
+}
+.order-tracking{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.progress-order{
+    height: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+.tracking-milestone{
+    width: 14px;
+    height: 14px;
+    background-color: #ff7b00;
+    display: block;
+    border-radius: 50%;
+    opacity: .3;
+}
+.tracking-line{
+    width: 1px;
+    height: 90%;
+    background: #ff7b00;
+    display: block;
+    opacity: .3;
+}
+
+.current::before{
+    display: block;
+    content: "";
+    width: 22px;
+    height: 22px;
+    opacity: 0.2;
+    background-color: #ff7b00;
+    border-radius: 50%;
+    position: absolute;
+    top: -4px;
+    left: -4px;
+}
+.order-tracking-content{
+    color: rgb(149, 149, 149);
+    margin-top: -6px;
+    border-bottom: 1px solid rgb(198, 198, 198);
+    height: 80px;
+}
+.current{
+    opacity: 1 !important;
+    color: black;
+}
+
+.order-details{
+    padding: 10px ;
+}
+.order-tracking-header{
+    margin-top: -5px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+.tracking-item{
+    padding: 5px 7px;
+    border-bottom: 1.5px solid rgb(193, 200, 203);
+}
+.order-tracking-items p{
+    margin-bottom: 0;
+}
+.tracking-item-info, .tracking-item-qty{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+
+.tracking-order-img{
+    width: 55px;
+}
+.order-status{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.cus-cancel-order{
+    color: red;
+    /* border: none; */
+    background-color: transparent;
+    padding: 5px 7px;
+    border-radius: 7px;
+    border: 1px solid rgba(0,0,0,0.5);
+    font-weight: 500;
+    cursor: pointer;
+}
+.cus-cancel-order.active{
+    background-color: #d0d0d0;
+}
+.cus-cancel-order.nonactive:hover{
+    box-shadow: 0 0 6px rgba(212, 0, 0, 0.5);
+    border: 1px solid rgba(212, 0, 0, 0.5);
+}
+.cus-cancel-order.nonactive{
+    display: none;
+}
+.order-footer p{
+    margin-bottom: 0;
+}
+.order-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.tracking-order-link{
+    color: rgb(0, 0, 0);
+    background-color: rgb(245, 220, 0);
+    padding: 7px 35px;
+    font-weight: 500;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.5);
+    cursor: pointer;
+}

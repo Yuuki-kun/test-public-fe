@@ -1,0 +1,21 @@
+body{
+    background-color: #f2f7fd;
+}
+
+.header-top{
+    background-color: rgb(49, 63, 60);
+}
+.header-top-text{
+    color: #daddda;
+    font-size: 1rem;
+    padding: 7px;
+}
+a{
+    text-decoration: none;
+}
+@media screen and (max-width: 578px) {
+    .header-top-text{
+        font-size: .5rem;
+    }
+    
+}

@@ -1,0 +1,150 @@
+
+.customer-container{
+    margin-top: 160px;
+    padding: 10px 15px;
+}
+
+.cus-navigation{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* position: fixed; */
+}
+.top-content{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: flex-start;
+}
+.top-content img{
+    width: 100px;
+    height: auto;
+}
+.cus-info p{
+    margin-bottom: 0;
+}
+.menu-bar{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: flex-start;
+}
+.menu-bar > a{
+    text-decoration: none;
+    color: black;
+    width: 95%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+
+.menu-bar > a:hover{
+    text-decoration: none;
+    color: black;
+    background-color: #c1cac5;
+}
+.profile{
+    margin-top: 30px;
+    background-color: #fff;
+    border-radius: 7px;
+
+}
+.user-info{
+    display: flex;  
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+}
+.date-of-bird, .sex, .country{
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: flex-start;
+}
+.profile-info{
+    border-right: 1px solid;
+}
+.profile-info p{
+    margin-bottom: 0;
+}
+.user-contact-header{
+    margin-left: 48%;
+}
+.contact-info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contact-infor-element{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.contact-infor-element > p{
+    margin-bottom: 0;
+}
+
+.orders-container{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.orders-option{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: #fff;
+    
+}
+.orders-option button{
+    border: none;
+    background-color: #fff;
+    padding: 7px 15px;
+    width: 100%;
+    border-bottom: 2px solid transparent;
+    transition: all .2s;
+}
+
+.orders-option button:hover{
+    background-color: rgb(218, 218, 226);
+    padding: 7px 15px;
+    width: 100%;
+}
+.orders-option .clicked-button{
+    background-color: rgb(218, 218, 226);
+    border-bottom: 2px solid rgb(0, 78, 203);
+}
+
+.all-orders{
+    margin-top: 40px;
+}
+.all-orders p{
+    margin-bottom: 0;
+}
+.my-order{
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+.my-order .item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #bebfbe;
+    padding-bottom: 25px;
+}
+.item .item-name{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}

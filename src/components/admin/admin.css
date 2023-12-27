@@ -1,0 +1,861 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-body {
+    background-color:#f2f7fd;
+    height: 100vh !important;
+}
+
+/* thẻ div chứa thanh nav */
+.admin-sidebar {
+    position: fixed;
+    left: 0px;
+    width: 5rem;
+    padding: 1rem 0.5rem;
+    color: #fff;
+    transition: all 0.5s linear;
+    background-color: #2980b9;
+    z-index: 2;
+
+}
+
+.admin-sidebar:hover {
+    width: 240px;
+    .admin-logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .5s;
+    }
+    .menu span {
+        display: block;
+    }
+}
+
+/* logo trên thanh nav */
+.admin-logo{
+    margin-bottom: 5rem;
+}
+.admin-logo img {
+    width: 64px;
+}
+
+/*menu chứa danh sách các chức năng trong thanh nav */
+.menu {
+    list-style: none;
+    padding: 0;
+}
+
+
+.menu li {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
+    margin: 20px 0px;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu li:hover,
+.active {
+    background-color: #e0e0e058;
+}
+
+.menu a {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.menu a span {
+    overflow: hidden;
+    text-wrap: nowrap;
+}
+
+.menu a i {
+    font-size: 30px;
+}
+
+.menu span {
+    display: none;
+}
+
+
+/* thanh tiêu đề mỗi trang và chứa thời gian (ngay đầu mỗi trang) */
+.contaienr-title {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    background-color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    box-shadow: 10px 10px 10px 0px #e6e6e6;
+
+}
+
+
+                                /* chỉnh css cho trang dashboard */
+
+.container-nav{
+    width: 7%;
+}
+
+/* css đối với thanh tiêu đề trang order và product */
+.contaienr-title-order,
+.contaienr-title-product,
+.contaienr-title-category {
+    margin-top: 20px;
+}
+
+/* chứa button xóa all, hiện số mục và tìm kiếm ở đầu table 2 trang order và product */
+.container-head-order,
+.container-head-product,
+.container-head-category{
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+/* chứa 4 box thống kê ở trang dashboard */
+.container-statistical-dashboard {
+    padding: 0 10px;
+}
+
+.container-statistical-dashboard i {
+    font-size: 50px;
+}
+
+
+/* cardBox là mỗi box */
+
+.cardBox-dashboard {
+    width: 320px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px 0px #e6e6e6;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.cardBox-dashboard:hover {
+    background-color: #478cf9;
+    color: #fff;
+
+    .number-dashboard {
+        color: #fff;
+    }
+}
+
+.number-dashboard {
+    font-size: 30px;
+    font-weight: 700;
+    color: #478cf9;
+}
+
+/* css cho biểu đồ cột được tạo bằng js */
+.chart-dashboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 400px;
+    background: #fff;
+    box-shadow: 10px 10px 10px 0px #e6e6e6;
+    border-radius: 10px;
+    padding: 5px;
+
+}
+
+/* mỗi cột trong chart */
+.bar-dashboard {
+    width: calc(8% - 5px);
+    /* tính toán chiều rộng mỗi cột trong chart */
+    background: #478cf9;
+    text-align: center;
+    transition: height 0.5s;
+    position: relative;
+}
+
+.bar-dashboard-text {
+    position: absolute;
+    top: -22px;
+    /* đặt số lên đầu mỗi cột */
+    transform: translateX(-50%);
+    /* căn giữa số theo chiều ngang */
+}
+
+.selling-products-dashboard {
+    height: 400px;
+    background: #fff;
+    box-shadow: 10px 10px 10px 0px #e6e6e6;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.title-selling-dashboard {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    height: 50px;
+    background-color: #fff;
+    font-size: large;
+    font-weight: 600;
+}
+
+.title-selling-dashboard,
+.product-selling-dashboard {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.selling-image-dashborad {
+    padding: 10px 0px 10px 15px;
+}
+
+.selling-image-dashborad img {
+    width: 6rem;
+}
+
+@media screen and (max-width: 576px) {
+    .admin-sidebar {
+        padding: 0;
+        width: 50px;
+    }
+
+    .admin-sidebar:hover {
+        width: 150px;
+        transition: 0.5s;
+    }
+
+    .selling-image-dashborad img {
+        width: 4rem;
+    }
+
+}
+
+
+                                /* css chung của 2 trang order và product */
+
+
+
+/* chỉnh hiệu ứng cho button xóa tất cả ở 2 trang và button thêm sách ở trang product */
+.clearAllProduct-product,
+.clearAllOrder-order,
+.clearAllCategory-category,
+.addProduct-product,
+.addCategory-category{
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+}
+
+.clearAllProduct-product:hover,
+.clearAllOrder-order:hover,
+.clearAllCategory-category:hover,
+.addProduct-product:hover,
+.addCategory-category:hover {
+    background-color: #2980b9;
+    color: #fff;
+}
+
+
+/* table-infor-order là class chứa table trang order, table-infor-product là class chứa table của trang product */
+/* chỉnh khung chứa table của 2 trang order và product */
+.table-infor-product,
+.table-infor-order,
+.table-infor-category {
+    overflow: auto;
+    height: 100vh;
+}
+
+/* chỉnh table của 2 trang order và product */
+.table-infor-product table,
+.table-infor-order table,
+.table-infor-category table {
+    border-collapse: collapse;
+    position: relative;
+    width: 100%;
+}
+
+/* tiêu đề table 2 trang */
+.title-table-product,
+.title-table-order,
+.title-table-category{
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* chỉnh css thẻ th và td 2 trang order và product */
+
+.data-table-order > table{
+    width: 100%;
+}
+
+.title-table-product th,
+.data-table-product td,
+.title-table-order th,
+.data-table-order td,
+.title-table-category th,
+.data-table-category td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}
+.data-table-category img{
+    width: 100px;
+}
+
+/* độ rộng của cột mô tả trong trang category */
+.title-table-category th:nth-child(4), .data-table-category td:nth-child(4) {
+    max-width: 600px; 
+  }
+ /* nội dung cột mô tả của trang category nằm bên trái */
+.data-table-category td:nth-child(4){
+    text-align: left;
+}
+.title-table-product th,
+.title-table-order th,
+.title-table-category th {
+    background-color: #e6e2e2;
+}
+
+/* chỉnh css cho icon chỉnh sửa và xóa của cả 2 trang order và product trong cột chức năng */
+.data-table-product i,
+.data-table-order i,
+.data-table-category i{
+    font-size: 25px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+/* 
+chỉnh css cho icon chỉnh sửa ở cả 2 trang order và product */
+.data-table-product i:first-child,
+.data-table-order i:first-child, 
+.data-table-category i:first-child{
+    color: orange;
+    background-color: rgba(248, 202, 119, 0.5);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+
+/* chỉnh css cho icon xóa ở cả 2 trang order và product */
+.data-table-product i:last-child,
+.data-table-order i:last-child,
+.data-table-category i:last-child{
+    color: red;
+    background-color: rgba(191, 61, 61, 0.3);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+/* chỉnh css cho ảnh sách của trang admin-product-management*/
+
+.data-table-product img {
+    width: 85px;
+}
+
+
+/* css cho form addProduct và form addCategory*/
+
+.container-form-product,
+.container-form-category{
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(209, 209, 209, 0.7);
+  
+  }
+
+.container-form-product.show, 
+.container-form-category.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+.form-add-prodcut,
+.form-add-category{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.2);
+  }
+
+
+/* responsive*/
+
+.admin-add-product{
+    
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+}
+
+.admin-add-product-form-control{
+    margin-left: 7rem;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 55px 50px;
+    align-items: center;
+    height: auto;
+    margin-left: 10vw;
+    width: 80vw;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 2px 16px 10px rgba(0,0,0,0.1);
+}
+.admin-add-product-form-control .form-input{    
+    width: 50%;
+    padding-top: 25px;
+}
+.form-input input, textarea, select{    
+    margin-top: 5px;
+    border-radius: 3px;
+    border: none;
+    width: 85%;
+    height: auto;
+    display: block;
+    padding: 5px;
+    background-color: rgb(233, 236, 239);
+}
+.form-input select{
+    height: 35px;
+}
+.form-input .file-input{
+    display: inline;
+}
+.file-w70{
+    width: 70% !important;
+}
+.form-input textarea{
+    height: 105px;
+}
+
+.add-prod-control-btn{
+    align-self: flex-end;
+    display: flex;
+    gap: 15px;
+    width: 50%;
+}
+
+.add-prod-control-btn button{
+    padding: 5px 10px;
+    width: 25%;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+.add-prod-control-btn button:first-child{
+    background-color: rgb(77, 204, 107);
+}
+.add-prod-control-btn button:last-child{
+    background-color: rgb(184, 32, 78);
+}
+
+.file-delete{
+    background-color:rgb(246, 246, 246);
+    color: white;
+    border: none;
+    width: 65px;
+    margin-right: auto;
+    margin-left: 2%;
+    height: 35px;
+    border-radius: 5px;
+}
+.clear-file-icon{
+    font-size: 30px;
+}
+.data-table-product td:nth-child(1){
+    width: 10px;    
+}
+
+.data-table-product td:nth-child(2){
+    width: 350px;
+}
+
+.search-product{
+    width: 55%;
+}
+.dropdown{
+    margin-top: 25px;
+    margin-left: 10px;
+    margin-bottom: 25px;
+}
+.can-sts-link{
+    background-color: rgb(236, 236, 236) !important;
+    color: black;
+}
+.cannotChange-sts-link{
+    background-color: #8b8b8b !important;
+}
+.can-sts-link, .cannotChange-sts-link{
+    padding: 5px 10px;
+}
+.can-sts-link:hover, .cannotChange-sts-link:hover{
+    /* color: none; */
+    cursor: pointer;
+}
+.can-sts-link:hover{
+    background-color: blue !important;
+    color: white;
+}
+
+.admin-tracking-order{
+    padding: 20px 10px !important;
+}
+
+.admin-tracking-order .order-tracking{
+    padding-left: 30px;
+}
+.admin-tracking-order .order-tracking-content{
+    border: none;
+    margin-left: 10px;
+}
+.admin-tracking-order .order-status-selection{
+    width: 200px;
+    height: 30px;
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+.admin-tracking-order .delete-status-icon{
+    font-size: 25px;
+    cursor: pointer;
+}
+.admin-tracking-order .delete-status-btn{
+    height: 35px;
+    width: 45px;
+    border-radius: 7px;
+    border: none;
+    background-color: transparent;
+}
+.admin-tracking-order .delete-status-btn:hover{
+    background-color: rgb(215, 215, 215);
+}
+.admin-tracking-order .current select{
+    background-color:  rgb(183, 183, 183);
+}
+
+.add-nxb-btn{
+    margin-top: 20px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(66, 101, 0);
+    color: white;
+}
+.input-group-add-nxb{
+    padding: 10px;
+}
+.input-group-add-nxb label{
+    margin-top: 20px;
+}
+.input-group-add-nxb input{
+    width: 55%;
+
+}
+.add-nxb-submit{
+    padding: 5px 17px;
+    margin-top: 15px;
+    border: .1rem solid blue;
+    color: blue;
+    font-weight: 500;
+    border-radius: 5px;
+}
+
+  @media screen and (min-width: 992px) and (max-width:1200px) {
+    .selling-desciption-dashboard {
+        padding: 0 10px 0 15px;
+    }
+
+    .selling-price-dashboard {
+        margin-right: 10px;
+    }
+    .table-infor-product table,
+    .table-infor-order table,
+    .table-infor-catagory table{
+        width: 1200px;
+    }
+    .title-table-category th:nth-child(4), .data-table-category td:nth-child(4) {
+        max-width: 500px; 
+      }
+    
+}
+.order-details-container{
+    margin-bottom: 0;
+    height: 100%;
+}
+.cus-info-container{
+    width: 32%;
+    background-color: #fff;
+    margin-right: 12px;
+}
+.cus-info-container .cus-info-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.order-details-action{
+    margin-bottom: 1rem;
+}
+
+.cus-info-container .cus-info-row p{
+    display: inline;
+}
+
+.invoice-container{
+    
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 70%;
+    height: auto;
+    background-color: #fff;
+    box-shadow: 0px 0px 19px rgba(0, 0, 0, 0.6);
+    padding: 35px 30px;
+}
+.download-invoice-btn{
+    position: fixed;
+    bottom: 1rem;
+}
+.invoice-top-info{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    line-height: 5px;
+}
+.invoice-number{
+    margin-bottom: 0;
+}
+.company-info, .to-cus-info, .shipping-info{
+    margin-top: 20px;
+}
+.invoice-product-row{
+    display: flex;
+    /* justify-content: space-between; */
+}
+.invoice-footer{
+    margin-top: 2rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+   padding-left: 3rem;
+   padding-right: 3rem;
+}
+.invoice-customer, .invoice-saler{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.signature-valid{
+    position: relative;
+    width: 320px;
+    height: 130px;
+    background: transparent;
+    border: 1.5px solid rgb(2, 176, 2);
+    color:  rgb(2, 176, 2);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10px 20px;
+}
+.signature-valid .valid-icon{
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    font-size: 50px;
+}
+.signature-valid .company-name{
+    margin-top: 7px;
+    margin-bottom: 7px;
+    font-weight: 700;
+}
+.signature-valid p{
+   margin-bottom: 0;
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+
+    /* chỉnh kích thước ảnh trong table của trang admin-product-management */
+
+    .data-table-product img {
+        width: 60px;
+    }
+    .title-table-category th:nth-child(4), .data-table-category td:nth-child(4) {
+        max-width: 400px; 
+      }
+}
+
+@media screen and (max-width: 575px) {
+
+    .selling-desciption-dashboard {
+        padding: 0 5px 0 10px;
+    }
+
+    .selling-desciption-dashboard,
+    .selling-price-dashboard {
+        font-size: 14px;
+    }
+
+    .title-selling-dashboard {
+        font-size: medium;
+        font-weight: 500;
+    }
+
+    .selling-price-dashboard {
+        margin-right: 5px;
+    }
+
+    
+
+    .data-table-product img {
+        width: 50px;
+    }
+    .title-table-category th:nth-child(4), .data-table-category td:nth-child(4) {
+        max-width: 200px; 
+      }
+    
+}
+
+.capture-btn-container{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    gap: 5px;
+}
+.capture-btn-container .capture-btn, .cancel-btn, .download-invoice-btn{
+    color: rgb(19, 115, 19);
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    /* border: 1px solid rgb(100, 100, 100); */
+    -webkit-font-smoothing: antialiased;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all .3s;
+    margin-left: 10px;
+    border: none;
+    box-shadow: 0 0 2px rgb(0, 71, 0, 0.9); /* Điều chỉnh giá trị theo ý muốn */
+
+}
+.capture-btn-container .capture-btn:hover, .cancel-btn:hover{
+    box-shadow: 0 0 6px rgba(0, 151, 0, 0.9); /* Điều chỉnh giá trị theo ý muốn */
+
+}
+.cancel-btn{
+    color: rgb(212, 0, 0);
+}
+.download-invoice-btn{
+    color: rgb(48, 48, 48);
+}
+.download-invoice-btn:hover{
+    box-shadow: 0 0 6px rgba(48, 48, 48, 0.9); /* Điều chỉnh giá trị theo ý muốn */
+}
+.cancel-btn:hover{
+    box-shadow: 0 0 6px rgba(212, 0, 0, 0.9); /* Điều chỉnh giá trị theo ý muốn */
+
+}
+
+.capture-btn:active, .download-invoice-btn:active{
+    background-color: rgb(0, 212, 0);
+    color: #fff;
+}
+
+.capture-btn-container .icon{
+    font-size: 18px;
+}
+
+.tracking-item{
+    display: flex;
+    margin-left: 1rem;
+}
+.tracking-item-info{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    align-items: flex-start;
+    justify-content: center;
+    line-height: 5px;
+    margin-top: 0;
+}
+
+.tracking-item img{
+    width: 5rem;
+}
+.new-order{
+    background-color:  #d1fab3;
+}
+
+.refund-btn{
+    padding: 5px 12px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    background-color: #3178eb;
+    color: white;
+    border: none;
+    margin-right: 20px;
+}
+
+.refund-btn:hover{
+    background-color: #0056e1;
+}
+
+.order-details-action a{
+    color: black;
+    font-size: 1.2rem ;
+}
+
+.order-details-action a:hover{
+    color: rgb(0, 130, 0);
+    font-size: 1.2rem ;
+}
+/* reponsive cho form thêm sách và form thêm danh mục*/
+
+@media screen and (min-width: 900px) {
+    .form-add-prodcut,
+    .form-add-category{
+      width: 800px;
+    }
+  }
+
+  @media screen and (max-width: 899px) {
+    .form-add-prodcut,
+    .form-add-category{
+      width: 95%;
+    }
+    /* chỉnh kích độ rộng bảng  */
+    .table-infor-product table,
+    .table-infor-order table,
+    .table-infor-catagory table {
+        width: 980px;
+    }
+  }

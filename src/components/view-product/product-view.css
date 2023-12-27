@@ -1,0 +1,132 @@
+.product-view-info{
+    margin-top: 160px;
+}
+.img-view-container{
+    /* background-color: #fff; */
+    /* padding: 15px 2px; */
+    border-radius: 10px;
+    
+}
+
+.img-view-container .current-img{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: #fff;
+    padding: 15px 20px;
+    margin-bottom: 5px;    
+}
+
+.img-view-container .slider-details-img{
+    background-color: #fff;
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+
+
+.details-container{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.book-short-info,
+.book-full-details-info,
+.book-details-description{
+    background-color: #fff;
+    padding: 15px 10px 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.purchase-container{
+    background-color: #fff;
+    padding: 15px 10px 10px 20px;
+    border-radius: 10px;
+    height: 250px;
+}
+
+.react-simple-image-viewer__modal{
+    z-index: 100000;
+}.styles-module_image__2hdkJ{
+    width: auto !important;
+    height: auto !important;
+    border-radius: 0px !important;
+}
+
+
+.img-img{
+    border-radius: 0px !important;
+    width: 90% !important;
+    margin: 5px !important;
+    margin-top: 10px !important;
+}
+
+
+
+.itemAmountControl{
+    border: 1px solid rgb(200, 200, 200);
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    width: 150px;
+}
+.control-amount{
+    width: 42px;
+    height: 35px;
+    background-color: transparent;
+    border: none;
+}
+
+ .decrease{
+    border-right: 1px solid rgb(200, 200, 200);
+}
+.increase{
+    border-left:1px solid rgb(200, 200, 200);
+}
+
+input[type="number"] {
+
+    -moz-appearance: textfield; /* Firefox */
+}
+  
+  input[type="number"]::-webkit-inner-spin-button, 
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .itemAmountControl {
+    display: flex;
+    justify-content: space-between;
+}
+.purchase-container .action-button{
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.purchase-container .action-button button{
+    padding: 8px;
+    width: 95%;
+    margin-top: 7px;
+    border-radius: 7px;
+    border: none;
+    height: 52px;
+}
+
+.purchase-container .action-button button:first-child{
+    background-color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    border: 2px solid blue;
+
+}
+
+.purchase-container .action-button button:last-child{
+    background-color: rgb(73, 109, 255);
+    color: #fff;
+    font-size: 23px;
+    font-weight: 400;
+}
