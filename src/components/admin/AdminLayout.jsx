@@ -5,7 +5,7 @@ import Login from "../login/Login";
 import { ShopContext } from "../../context/BookContext";
 
 const AdminLayout = ({ loggedIn }) => {
-  const [role, setRole] = useState("");
+  const [role, setRole] = useState("ADMIN");
   const { admin_login_info } = useContext(ShopContext);
   const [loading, setLoading] = useState(true);
   const userEmail = admin_login_info?.user_info
@@ -46,7 +46,7 @@ const AdminLayout = ({ loggedIn }) => {
 
   useEffect(() => {
     setLoading(true);
-    checkUserRole();
+    // checkUserRole();
     setLoading(false);
   }, [admin_login_info, userEmail]);
 
@@ -54,9 +54,9 @@ const AdminLayout = ({ loggedIn }) => {
   //   return <Login role={"ADMIN"} />;
   // }
 
-  if (admin_login_info === null) {
-    return <Login role={"ADMIN"} />;
-  }
+  // if (admin_login_info === null) {
+  //   return <Login role={"ADMIN"} />;
+  // }
 
   console.log("role=" + role);
   const logout = () => {
